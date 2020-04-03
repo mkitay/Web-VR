@@ -1,0 +1,31 @@
+# File produced by Open Asset Import Library (http://www.assimp.sf.net)
+# (assimp v5.0.639693989)
+
+newmtl walls
+Kd 1 1 1
+Ka 0 0 0
+Ks 1 1 1
+Ns 50
+illum 2
+
+newmtl glass.001
+Kd 0.26225066 0.66538733 0.79910278
+Ka 0 0 0
+Ks 1 1 1
+Ns 50
+illum 2
+
+newmtl beams
+Kd 0.20155628 0.0051815165 0.0069954107
+Ka 0 0 0
+Ks 1 1 1
+Ns 50
+illum 2
+
+newmtl material
+Kd 1 1 1
+Ka 0 0 0
+Ks 1 1 1
+Ns 50
+illum 2
+

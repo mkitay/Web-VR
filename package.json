@@ -20,6 +20,7 @@
     "gulp-sourcemaps": "^2.6.5"
   },
   "dependencies": {
+    "aframe-physics-system": "^4.0.1",
     "gulp-autoprefixer": "^7.0.1"
   }
 }

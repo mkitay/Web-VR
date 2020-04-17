@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Web VR Test</title>
+  <title>Web VR</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Alata|Tomorrow|Ubuntu&display=swap" rel="stylesheet">
@@ -16,8 +16,9 @@
 
   <meta name="theme-color" content="#fafafa">
 
-  <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-  <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <!-- <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.2.0/dist/aframe-extras.min.js"></script> -->
+  <!-- <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script> -->
   <script src="aframe-physics-system.js"></script>
 </head>
 
@@ -25,49 +26,119 @@
   <a-scene>
     <a-assets>
       <img id="wood" src="img/wood.png">
+      <img id="water" src="img/water.gif">
+      <img id="dirt" src="img/dirt.png">
+      <img id="KOB" src="img/KOB1.jpg">
+      <img id="ice" src="img/ice.jpg">
       <img id="cobble" src="img/cobble.jpg">
+      <img id="testsky" src="img/sky.jpg">
+      <img id="grass" src="img/grass.jpg">
       <a-asset-item id="catobj" src="img/cat/cat.obj"></a-asset-item>
       <a-asset-item id="catmtl" src="img/cat/cat.mtl"></a-asset-item>
       <a-asset-item id="ticketobj" src="img/ticket.obj"></a-asset-item>
       <a-asset-item id="ticketmtl" src="img/ticket.mtl"></a-asset-item>
-    </a-assets>
+      <a-asset-item id="monkeyobj" src="img/monkey/monkey.obj"></a-asset-item>
+      <a-asset-item id="monkeymtl" src="img/monkey/monkey.mtl"></a-asset-item>
+      <a-asset-item id="fenceobj" src="img/fence/fence.obj"></a-asset-item>
+      <a-asset-item id="fencemtl" src="img/fence/fence.mtl"></a-asset-item>
+      <a-asset-item id="blkcatobj" src="img/blkcat/blkcat.obj"></a-asset-item>
+      <a-asset-item id="blkcatmtl" src="img/blkcat/blkcat.mtl"></a-asset-item>
+      <a-asset-item id="pallasobj" src="img/pallas/pallas.obj"></a-asset-item>
+      <a-asset-item id="pallasmtl" src="img/pallas/pallas.mtl"></a-asset-item>
+      <a-asset-item id="treeobj" src="img/tree/tree.obj"></a-asset-item>
+      <a-asset-item id="treemtl" src="img/tree/tree.mtl"></a-asset-item>
+      <a-asset-item id="cactusobj" src="img/cactus/cactus.obj"></a-asset-item>
+      <a-asset-item id="cactusmtl" src="img/cactus/cactus.mtl"></a-asset-item>
+      <a-asset-item id="KOBobj" src="img/KOB.obj"></a-asset-item>
+      <a-asset-item id="KOBmtl" src="img/KOB1.jpg"></a-asset-item>
+      <a-asset-item id="chickenobj" src="img/chicken/chicken.obj"></a-asset-item>
+      <a-asset-item id="chickenmtl" src="img/chicken/chicken.mtl"></a-asset-item>
+      <a-asset-item id="penguinobj" src="img/penguin/penguin.obj"></a-asset-item>
+      <a-asset-item id="penguinmtl" src="img/penguin/penguin.mtl"></a-asset-item>
+      <a-asset-item id="creamobj" src="img/icecream/icecream.obj"></a-asset-item>
+      <a-asset-item id="creammtl" src="img/icecream/icecream.mtl"></a-asset-item>
 
+    </a-assets>
+    </a-assets>
     <a-entity position="0.022 -1.3 2.5">
     <a-camera></a-camera>
     </a-entity>
-      <a-plane static-body height="20" width="20" material="src:img/cobble.jpg" repeat="20 20" position="" rotation="-90 0 0" geometry="height:5;width:4"></a-plane>
-      <a-entity text="color:#000000;value:Welcome;font: mozillavr;" position="2.5 0.92 0.426" scale="6 6"></a-entity>
-      <a-cone material="src: #wood" position="-1.206 0.544 0.32" height="1" color="grey" geometry="radiusBottom:0.2;radiusTop:0.1"></a-cone>
-      <a-cone material="src: #wood" position="1.206 0.544 0.32" height="1" color="grey" geometry="radiusBottom:0.2;radiusTop:0.1"></a-cone>
-      <a-box color="grey" position=".022 .818 0.32" width="1" height="0.25" material="color:#2c8030" geometry="depth:0.1;width:2.5"></a-box>
+    <!-- <a-entity camera position="0.022 0.6 2" kinematic-body universal-controls velocity rotation gamepad-controls keyboard-controls touch-controls>
+    </a-entity> -->
+      <a-sky src="#testsky"></a-sky>
+      <a-plane static-body height="20" width="20" material="src:img/cobble.jpg" repeat="20 20" rotation="-90 0 0" geometry="height:5;width:4"></a-plane>
+      <a-entity text="color:yellow;value:VR Zoo;font: mozillavr;" position="2.5 1.23 0.426" scale="6 6"></a-entity>
+      <a-cone material="src: #wood" position="-1.206 0.544 0.32" height="1.5" color="grey" geometry="radiusBottom:0.2;radiusTop:0.1"></a-cone>
+      <a-cone material="src: #wood" position="1.206 0.544 0.32" height="1.5" color="grey" geometry="radiusBottom:0.2;radiusTop:0.1"></a-cone>
+      <a-box position=".022 1.121 0.32" width="1" height="0.25" material="src: #wood" geometry="depth:0.1;width:2.5"></a-box>
       <a-entity obj-model="obj: #catobj; mtl: #catmtl"></a-entity>
-      <a-entity obj-model="mtl:img/cat/cat.mtl;obj:img/cat/cat.obj" position="0.102 0.012 -0.468" rotation="270 90 0" scale="0.01 0.01 0.01"></a-entity>
-      <a-entity static-body obj-model="mtl:img/ticket.mtl;obj:img/ticket.obj" position="-0.508 0.05 -1.07" rotation="-90 0 -90" scale="0.175 0.175 0.175"></a-entity>
-      <a-entity static-body obj-model="mtl:img/ticket.mtl;obj:img/ticket.obj" position="0.508 0.05 -1.07" rotation="-90 0 -90" scale="0.175 0.175 0.175"></a-entity>
-      -------------------------------------------
-      <a-sphere position="0 4 -4" radius="1.25" material="src: #wood"></a-sphere>
-      <a-sky color=lightblue></a-sky>
-      <a-cone position="0 1.5 -4" height="3" color="yellow"></a-cone>
-      <a-sphere position="1 2 -4" radius="1" color=red></a-sphere>
-      <a-sphere position="-1 2 -4" radius="1" color=red></a-sphere>
-      <a-box color=grey position="-1 0 -3" width="1" height="0.25"></a-box>
-      <a-box color=grey position="1 0 -3" width="1" height="0.25"></a-box>
-      <a-cone position="0 5 -4" height="1" color="aqua"></a-cone>
-      <a-box color=blue position="0 3.5 -3" width="1" height="0.25"></a-box>
-      <a-octahedron position="0.5 4.2 -3" radius="0.5" color=purple></a-octahedron>
-      <a-octahedron position="-0.5 4.2 -3" radius="0.5" color=purple></a-octahedron>
-
-      <a-sphere position="5 4 -4" radius="1.25" color=white></a-sphere>
-      <a-cone position="5 1.5 -4" height="3" color="yellow"></a-cone>
-      <a-sphere position="6 2 -4" radius="1" color=red></a-sphere>
-      <a-sphere position="4 2 -4" radius="1" color=red></a-sphere>
-      <a-box color=grey position="4 0 -3" width="1" height="0.25"></a-box>
-      <a-box color=grey position="6 0 -3" width="1" height="0.25"></a-box>
-      <a-cone position="5 5 -4" height="1" color="aqua"></a-cone>
-      <a-box color=blue position="5 3.5 -3" width="1" height="0.25"></a-box>
-      <a-octahedron position="5.5 4.2 -3" radius="0.5" color=purple></a-octahedron>
-      <a-octahedron position="4.5 4.2 -3" radius="0.5" color=purple></a-octahedron>
-  </a-scene>
+      <a-entity obj-model="mtl:img/cat/cat.mtl;obj:img/cat/cat.obj" position="-2.391 0.012 -3.697" rotation="270 60 0" scale="0.01 0.01 0.01"></a-entity>
+      <a-entity obj-model="mtl:img/ticket.mtl;obj:img/ticket.obj" position="-0.508 0.05 -1.07" rotation="-90 0 -90" scale="0.175 0.175 0.175"></a-entity>
+      <a-entity obj-model="mtl:img/ticket.mtl;obj:img/ticket.obj" position="0.508 0.05 -1.07" rotation="-90 0 -90" scale="0.175 0.175 0.175"></a-entity>
+      <a-entity obj-model="mtl:img/fence/fence.mtl;obj:img/fence/fence.obj" position="1.429 -0.044 -0.136" rotation="-90 90 0" scale=".005 .005 .005"></a-entity>
+      <a-entity obj-model="mtl:img/fence/fence.mtl;obj:img/fence/fence.obj" position="-1.429 -0.044 -0.136" rotation="-90 90 0" scale=".005 .005 .005"></a-entity>
+      <a-entity obj-model="mtl:img/fence/fence.mtl;obj:img/fence/fence.obj" position="-1.429 -0.044 -1" rotation="-90 90 0" scale=".005 .005 .005"></a-entity>
+      <a-entity static-body obj-model="mtl:img/fence/fence.mtl;obj:img/fence/fence.obj" position="1.429 -0.044 -1" rotation="-90 90 0" scale=".005 .005 .005"></a-entity>
+      <a-plane static-body height="10" width="10" material="src:img/wood.png" repeat="1 1" rotation="-90 0 0" position="0 0.001 -4.180" scale="0.3 0.4 1"></a-plane>
+      <a-plane static-body height="10" width="10" material="src:img/grass.jpg" repeat="1 1" rotation="-90 0 0" position="-2.253 0.001 -3.179" scale=".15 .2 .25"></a-plane>
+      <a-entity obj-model="mtl:img/blkcat/blkcat.mtl;obj:img/blkcat/blkcat.obj" position="-1.998 0.012 -2.676" rotation="270 120 0" scale="0.0075 0.0075 0.0075"></a-entity>
+      <a-entity obj-model="mtl:img/pallas/pallas.mtl;obj:img/pallas/pallas.obj" position="-2.375 0.012 -3.06" rotation="270 100 0" scale="0.02 0.012 0.012"></a-entity>
+      <a-entity obj-model="mtl:img/fence/fence.mtl;obj:img/fence/fence.obj" position="-1.782 -0.044 -2.157" rotation="-90 180 0" scale=".005 .005 .005"></a-entity>
+      <a-entity obj-model="mtl:img/fence/fence.mtl;obj:img/fence/fence.obj" position="-2.957 -0.044 -2.465" rotation="-90 90 0" scale=".005 .005 .005"></a-entity>
+      <a-entity obj-model="mtl:img/fence/fence.mtl;obj:img/fence/fence.obj" position="-2.961 -0.044 -3.667" rotation="-90 90 0" scale=".002 .005 .005"></a-entity>
+      <a-entity obj-model="mtl:img/fence/fence.mtl;obj:img/fence/fence.obj" position="-1.782 -0.044 -4.130" rotation="-90 180 0" scale=".005 .005 .005"></a-entity>
+      <a-entity obj-model="mtl:img/fence/fence.mtl;obj:img/fence/fence.obj" position="-1.557 -0.044 -2.571" rotation="-90 90 0" scale=".007 .005 .003"></a-entity>
+      <a-entity obj-model="mtl:img/cactus/cactus.mtl;obj:img/cactus/cactus.obj" position="1.547 0 .277" rotation="-90 0 0" scale=".003 .003 .003"></a-entity>
+      <a-entity obj-model="mtl:img/cactus/cactus.mtl;obj:img/cactus/cactus.obj" position="-1.547 0 .277" rotation="-90 0 0" scale=".003 .003 .003"></a-entity>
+      <a-plane static-body height="10" width="10" material="src:img/dirt.jpg" repeat="1 1" rotation="-90 0 0" position="-2.253 0.001 -5.178" scale=".15 .2 .25"></a-plane>
+      <!-- <a-entity static-body obj-model="obj: #KOBobj" material="src: #KOB"></a-entity> -->
+      <a-entity static-body obj-model="obj:img/KOB.obj" material="src:img/KOB1.jpg" position="-1.466 -0.188 1.553" rotation="0 140 0" scale=".02 .02 .02"></a-entity>
+      <a-entity obj-model="mtl:img/tree/tree.mtl;obj:img/tree/tree.obj" position="-2.391 0.032 -4.28" scale=".6 .6 .6"></a-entity>
+      <a-entity obj-model="mtl:img/monkey/monkey.mtl;obj:img/monkey/monkey.obj" position="-2.275 0.027 -5.514" rotation="270 60 0" scale=".005 .005 .005"></a-entity>
+      <a-entity obj-model="mtl:img/monkey1/monkey.mtl;obj:img/monkey1/monkey.obj" position="-1.871 0.027 -4.698" rotation="270 90 0" scale=".002 .002 .002"></a-entity>
+      <a-entity obj-model="mtl:img/monkey/monkey.mtl;obj:img/monkey/monkey.obj" position="-2.350 0.793 -4.323" rotation="180 0 0" scale=".005 .005 .005"></a-entity>
+      <a-entity obj-model="mtl:img/fence/fence.mtl;obj:img/fence/fence.obj" position="-2.957 -0.044 -4.593" rotation="-90 90 0" scale="0.007 0.005 0.005"></a-entity>
+      <a-entity obj-model="mtl:img/fence/fence.mtl;obj:img/fence/fence.obj" position="-1.782 -0.044 -6.117" rotation="-90 180 0" scale="0.005 0.005 0.005"></a-entity>
+      <a-entity static-body obj-model="mtl:img/fence/fence.mtl;obj:img/fence/fence.obj" position="-1.557 -0.044 -4.556" rotation="-90 90 0" scale="0.007 0.005 0.003"></a-entity>
+      <a-entity obj-model="mtl:img/chicken/chicken.mtl;obj:img/chicken/chicken.obj" position="-2.006 0.052 -3.913" rotation="0 -45 90" scale=".0005 .0005 .0005"></a-entity>
+      <a-entity obj-model="mtl:img/chicken/chicken.mtl;obj:img/chicken/chicken.obj" position="-1.742 0.052 -3.798" rotation="0 -45 90" scale=".0005 .0005 .0005"></a-entity>
+      <a-entity obj-model="mtl:img/chicken/chicken.mtl;obj:img/chicken/chicken.obj" position="-1.905 0.052 -3.657" rotation="0 -45 90" scale=".0005 .0005 .0005"></a-entity>
+      <a-plane static-body height="10" width="10" material="src:img/ice.jpg" repeat="1 1" rotation="-90 0 0" position="2.253 0.001 -3.179" scale=".15 .2 .25"></a-plane>
+      <a-entity obj-model="mtl:img/fence/fence.mtl;obj:img/fence/fence.obj" position="2.649 -0.044 -2.157" rotation="-90 180 0" scale=".005 .005 .005"></a-entity>
+      <a-entity obj-model="mtl:img/fence/fence.mtl;obj:img/fence/fence.obj" position="2.957 -0.044 -2.465" rotation="-90 90 0" scale=".005 .005 .005"></a-entity>
+      <a-entity obj-model="mtl:img/fence/fence.mtl;obj:img/fence/fence.obj" position="2.961 -0.044 -3.667" rotation="-90 90 0" scale=".002 .005 .005"></a-entity>
+      <a-entity obj-model="mtl:img/fence/fence.mtl;obj:img/fence/fence.obj" position="2.649 -0.044 -4.130" rotation="-90 180 0" scale=".005 .005 .005"></a-entity>
+      <a-entity obj-model="mtl:img/fence/fence.mtl;obj:img/fence/fence.obj" position="1.557 -0.044 -2.571" rotation="-90 90 0" scale=".007 .005 .003"></a-entity>
+      <a-entity obj-model="obj: img/penguin/penguin.obj; mtl: img/penguin/penguin.mtl" scale="0.003 0.003 0.003" rotation="-90 -45 0" position="1.938 .013 -3.686"></a-entity>
+      <a-entity obj-model="obj: img/icecream/icecream.obj; mtl: img/icecream/icecream.mtl" scale="0.0025 0.0025 0.0025" rotation="-90 90 0" position="0.072 .015 -4.144"></a-entity>
+      <a-entity geometry="primitive: octahedron" scale="0.5 0.5 0.5" position="2.51 0 -2.767" material="src:img/ice.jpg"></a-entity>
+      <a-entity obj-model="obj: img/penguin/penguin.obj; mtl: img/penguin/penguin.mtl" scale="0.003 0.003 0.003" rotation="-120 -50 -80" position="2.21443 0.013 -2.51551"></a-entity>
+      <a-entity obj-model="obj: img/sealion/sealion.obj; mtl: img/sealion/sealion.mtl" scale="0.003 0.003 0.003" rotation="-90 -45 0" position="2.43639 0.01 -3.61474"></a-entity>
+      <a-entity obj-model="obj: img/sealion/sealion.obj; mtl: img/sealion/sealion.mtl" scale="0.003 0.003 0.003" rotation="-90 -90 0" position="1.93992 0.01 -3.12822"></a-entity>
+      <a-plane static-body height="10" width="10" material="src:img/dirt.jpg" repeat="1 1" rotation="-90 0 0" position="2.253 0.001 -5.178" scale=".15 .2 .25"></a-plane>
+      <a-entity obj-model="mtl:img/fence/fence.mtl;obj:img/fence/fence.obj" position="2.957 -0.044 -4.524" rotation="-90 90 0" scale="0.007 0.005 0.005"></a-entity>
+      <a-entity obj-model="mtl: img/fence/fence.mtl; obj: img/fence/fence.obj" position="2.65784 -0.044 -6.117" rotation="-90 180 0" scale="0.005 0.005 0.005"></a-entity>
+      <a-entity obj-model="mtl: img/fence/fence.mtl; obj: img/fence/fence.obj" position="1.55668 -0.044 -4.556" rotation="-90 90 0" scale="0.007 0.005 0.003"></a-entity>
+      <a-entity obj-model="mtl: img/kangaroo/kangaroo.mtl; obj: img/kangaroo/kangaroo.obj" position="1.88579 0.013 -5.55918" rotation="-90 -120 0" scale="0.0025 0.003 0.0025"></a-entity>
+      <a-entity obj-model="mtl: img/birb/birb.mtl; obj: img/birb/birb.obj" position="2 0.013 -4.60601" rotation="-90 -50 0" scale="0.004 0.004 0.003"></a-entity>
+      <a-entity obj-model="mtl: img/rock/rock.mtl; obj: img/rock/rock.obj" position="2.5884 -0.0368 -5.13964" scale="0.15 0.25 0.25"></a-entity>
+      <a-entity obj-model="mtl: img/kangaroo/kangaroo.mtl; obj: img/kangaroo/kangaroo.obj" position="2.58046 0.28833 -5.10386" rotation="-90 -165 0" scale="0.0025 0.003 0.0025"></a-entity>
+      <a-box material="src: #water" opacity="0.5" scale="3.3 1 2" position=".012 0.496 -7.170"></a-box>
+      <a-entity obj-model="mtl: img/shark/shark.mtl; obj: img/shark/shark.obj" position="-0.32792 0.53256 -6.70729" rotation="0 30 0" scale="0.08 0.08 0.08"></a-entity>
+      <a-entity obj-model="mtl: img/nemo/nemo.mtl; obj: img/nemo/nemo.obj" position="0.97948 0.53256 -6.51265" rotation="-90 20 0" scale="0.03 0.03 0.03"></a-entity>
+      <a-entity obj-model="mtl: img/diver/diver.mtl; obj: img/diver/diver.obj" position="-0.90207 0.01 -6.36371" rotation="-90 20 0" scale="0.05 0.05 0.04"></a-entity>
+      <a-entity obj-model="mtl: img/trout/trout.mtl; obj: img/trout/trout.obj" position="0.37309 0.27629 -8.00942" rotation="-90 70 0" scale="0.07 0.07 0.07"></a-entity>
+      <a-entity obj-model="mtl: img/goblin/goblin.mtl; obj: img/goblin/goblin.obj" position="-0.6435 0.36614 -7.45314" rotation="-90 120 0" scale="0.005 0.005 0.005"></a-entity>
+      <a-entity obj-model="mtl: img/turtle/turtle.mtl; obj: img/turtle/turtle.obj" position="0.12746 0.23 -6.65662" rotation="-90 -80 0" scale="0.008 0.008 0.008"></a-entity>
+      <a-entity obj-model="mtl: img/robo/robo.mtl; obj: img/robo/robo.obj" position="0.00598 0.01 -4.35816" rotation="-90 0 0" scale="0.02 0.02 0.018"></a-entity>
+      <a-plane height="10" width="10" color="grey" repeat="1 1" rotation="0 0 90" position="-0.02327 0.25633 -8.16018" scale="0.15 0.32 0.3"></a-plane>
+      <a-plane height="10" width="10" color="grey" repeat="1 1" rotation="180 90 90" position="1.604 0.25041 -7.4108" scale="0.15 0.25 0.3" material="" geometry=""></a-plane>
+      <a-plane height="10" width="10" color="grey" repeat="1 1" rotation="0 90 90" position="-1.63868 0.25041 -7.4108" scale="0.15 0.25 0.3"></a-plane>
+      <a-plane height="10" width="10" material="src: img/dirt.jpg" repeat="1 1" rotation="-90 0 90" position="-0.00691 0.001 -7.1788" scale="0.2 0.3 0.25"></a-plane>
+      <a-plane height="10" width="10" color="grey" repeat="1 1" rotation="90 0 90" position="0.00025 1.00348 -7.17691" scale="0.2 0.35 0.3" opacity="0.8"></a-plane>
+      <a-entity obj-model="mtl: img/coffee/coffee.mtl; obj: img/coffee/coffee.obj" position="0.09841 0.01 -3.06564" rotation="0 180 0" scale="0.0035 0.004 0.0035"></a-entity>
+      <a-entity obj-model="mtl: img/robo/robo.mtl; obj: img/robo/robo.obj" position="0.12183 0.01 -3.09777" rotation="-90 180 0" scale="0.02 0.02 0.018"></a-entity>
+</a-scene>
 
 
   <script src="js/vendor/modernizr-3.8.0.min.js"></script>

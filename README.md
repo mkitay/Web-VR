@@ -1,3 +1,3 @@
 # A-Frame Web VR
 
-Web VR project using A-Frame
+Miniature Zoo Web VR project using A-Frame
